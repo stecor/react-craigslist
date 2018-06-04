@@ -1,0 +1,716 @@
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.home h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+    padding: 100px 0
+}
+
+.home .links {
+    background: rgba(0, 0, 0, 0.7);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[8];
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    margin-bottom: 70px
+}
+
+.home .links .categories {
+    padding-left: 0px;
+    border-right: 1px solid #3B3A3A
+}
+
+.home .links .categories .title {
+    display: block;
+    font-weight: 400;
+    font-size: .8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-decoration: none
+}
+
+.home .links .categories .group-links {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.home .links .categories .group-links.single-col {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr)
+}
+
+.home .links .categories a {
+    font-weight: 100;
+    font-size: 0.6rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-decoration: none
+}
+
+.home .links .categories a:hover {
+    color: red
+}
+
+.home .trending {
+    max-width: 800px;
+    margin: 0 auto
+}
+
+.home .trending .search {
+    width: 100%;
+    border: none;
+    padding: 16px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-left: 30px
+}
+
+.home .trending .search::-webkit-input-placeholder {
+    color: #d0d0d0;
+    font-weight: 100;
+    font-style: italic;
+    background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png);
+    background-repeat: no-repeat;
+    background-position: 6px;
+    background-size: 30px;
+    background-position: right
+}
+
+.home .trending .title {
+    font-size: .9rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-weight: 300
+}
+
+.home .trending .trending-tags {
+    text-align: center
+}
+
+.home .trending .trending-tags .tag {
+    padding: 10px 20px;
+    border-radius: 45px;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    margin-right: 20px
+}
+
+.home .trending .trending-tags .tag:hover {
+    background: #fff;
+    color: black;
+    font-weight: 500
+}
+
+.listings-page {
+    background: #fff
+}
+
+.listings-page header {
+    background: #fff
+}
+
+.listings-page #filter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 50px 20px;
+    border-top: 2px solid gray
+}
+
+.listings-page .make-model-comp {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap
+}
+
+.listings-page .form-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.listings-page .form-group label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase
+}
+
+.listings-page .form-group select {
+    background: #fff;
+    height: 28px;
+    color: #696969;
+    min-width: 100px;
+    font-size: 0.9rem;
+    border: 2px solid #a9a9a9;
+    margin-right: 20px
+}
+
+.listings-page .form-group.button {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+
+.listings-page .form-group .reset-btn {
+    color: #2A7DDD;
+    background: #F7F8FA;
+    cursor: pointer
+}
+
+.listings-page .form-group .reset-btn:hover {
+    background: #F7F8FA
+}
+
+.listings-page .form-group .primary-btn {
+    color: #fff;
+    cursor: pointer;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: #2A7DDD
+}
+
+.listings-page .form-group .primary-btn,
+.listings-page .form-group .reset-btn {
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px 20px
+}
+
+.listings-page #list-view {
+    background: #E8E8E8;
+    padding: 20px
+}
+
+.listings-page #list-view .white-box {
+    background: #fff;
+    padding: 20px
+}
+
+.listings-page #list-view .change-view {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+
+.listings-page #list-view .all-items {
+    padding: 20px 0px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px 20px
+}
+
+.listings-page #list-view .all-items .item {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    overflow: hidden
+}
+
+.listings-page #list-view .all-items .item .image {
+    background: url("https://www.gannett-cdn.com/-mm-/3db68d7c7efa34d3edfc911cec4c54ab5d49a091/c=919-719-2540-1938&r=x408&c=540x405/local/-/media/2018/02/19/USATODAY/USATODAY/636546521086794560-DodgeJourney18.jpg");
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 10px
+}
+
+.listings-page #list-view .all-items .item .price {
+    background: #fff;
+    position: absolute;
+    padding: 5px 10px;
+    color: green;
+    border-radius: 2px
+}
+
+.listings-page #list-view .all-items .details {
+    padding: 10px;
+    position: relative
+}
+
+.listings-page #list-view .all-items .details h5 {
+    font-size: .9rem;
+    color: #27292d;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    text-transform: capitalize
+}
+
+.listings-page #list-view .all-items .details .fa-star {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: gray
+}
+
+.listings-page #list-view .all-items .details .fa-star:hover {
+    color: red;
+    cursor: pointer
+}
+
+.listings-page #list-view .all-items .details .fa-star.active {
+    color: red
+}
+
+.listings-page #list-view .all-items .details .ma-clear {
+    position: absolute;
+    font-size: 18px;
+    right: 10px;
+    bottom: 10px;
+    color: gray
+}
+
+.listings-page #list-view .all-items .details .ma-clear:hover {
+    color: #000;
+    cursor: pointer
+}
+
+.listings-page #list-view .all-items .details h6 {
+    font-size: .7rem;
+    color: #565d68;
+    text-transform: capitalize
+}
+
+.details-page {
+    background: #E8E8E8;
+    padding: 20px 20px
+}
+
+.details-page .white-box {
+    background: #fff;
+    padding: 20px
+}
+
+.details-page .submenu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.details-page .submenu a {
+    color: #2782F2;
+    padding: 20px;
+    text-decoration: none
+}
+
+.details-page .submenu .direction {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+
+.details-page .submenu .sub-links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+
+.details-page .content-area {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px
+}
+
+.details-page .content-area .media-column .gallery .slider .main-image {
+    position: relative
+}
+
+.details-page .content-area .media-column .gallery .slider .main-image .arrows {
+    top: 0;
+    bottom: 0;
+    padding: 0 15px;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer
+}
+
+.details-page .content-area .media-column .gallery .slider .main-image .arrows.left-arrow {
+    left: 0;
+    background-image: url("./img/chevron_left.png");
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.details-page .content-area .media-column .gallery .slider .main-image .arrows.right-arrow {
+    right: 0;
+    background-image: url("./img/chevron_right.png");
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.details-page .content-area .media-column .gallery .slider .main-image .image-1 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.details-page .content-area .media-column .thumbnails {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3px;
+    padding: 3px 0
+}
+
+.details-page .content-area .media-column .thumbnails .thumb-img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+.details-page .details-column .date {
+    font-size: .8rem;
+    color: #424242;
+    margin-bottom: 15px
+}
+
+.details-page .details-column .title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 8px
+}
+
+.details-page .details-column .price {
+    font-size: 1.2rem;
+    color: #5ea909;
+    margin-bottom: 30px
+}
+
+.details-page .details-column label {
+    font-weight: 700;
+    font-size: .7rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block
+}
+
+.details-page .details-column .more-details {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e8e8e8
+}
+
+.details-page .details-column .more-details .info h5 {
+    font-size: .8rem;
+    font-weight: 300;
+    text-transform: capitalize
+}
+
+.details-page .details-column .description p {
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: #424242;
+    margin-bottom: 1.5rem
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(135deg, rgba(59, 52, 247, 0.3) 0%, rgba(154, 39, 230, 0.3) 100%), url("http://com.postmates.img.prod.s3.amazonaws.com/9fcb0858-0759-4e78-874b-bdcc2a048181/orig.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh
+}
+
+header {
+    padding: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #fff
+}
+
+header .fas {
+    margin-left: 10px
+}
+
+header .left-menu {
+    display: -ms-flexbox;
+    display: flex
+}
+
+header .left-menu .logo {
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 2rem;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none
+}
+
+header .left-menu .logo:hover {
+    color: #000
+}
+
+header .left-menu .city-dropdown {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 20px;
+    font-weight: 200;
+    cursor: pointer;
+    position: relative
+}
+
+header .left-menu .city-dropdown .scroll-area {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    min-width: 150px;
+    left: 0;
+    top: 35px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out
+}
+
+header .left-menu .city-dropdown .scroll-area.active {
+    visibility: visible;
+    top: 50px;
+    opacity: 1
+}
+
+header .left-menu .city-dropdown .scroll-area ul li {
+    padding: 15px
+}
+
+header .left-menu .city-dropdown .scroll-area ul li:hover {
+    background: rgba(0, 0, 0, 0.2)
+}
+
+header .right-menu {
+    display: -ms-flexbox;
+    display: flex
+}
+
+header .right-menu .user-img {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 10px
+}
+
+header .right-menu .user-dropdown {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 20px 17px 7px;
+    font-weight: 200;
+    text-transform: capitalize;
+    cursor: pointer
+}
+
+header .right-menu .post-btn {
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    padding-bottom: 10px;
+    background: #2782f2;
+    color: #fff;
+    cursor: pointer
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto
+}
